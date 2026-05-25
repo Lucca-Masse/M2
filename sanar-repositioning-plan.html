@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sanar Integrative — Strategic Repositioning Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #EAE4DC;
+    --cream-light: #F2EDE6;
+    --cream-dark: #D4CBBF;
+    --near-black: #1C1A18;
+    --dark-brown: #2E2A24;
+    --warm-brown: #5C4E3E;
+    --bronze: #7A5C3C;
+    --mid-brown: #3A2E24;
+    --text-body: #2E2418;
+    --text-muted: #5A4E42;
+    --rule: #B8ADA4;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--cream); color:var(--near-black); font-family:'Jost',sans-serif; font-weight:300; overflow-x:hidden; }
+
+  body::before {
+    content:''; position:fixed; inset:0;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events:none; z-index:1000; opacity:0.4;
+  }
+
+  .slide { min-height:100vh; width:100%; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden; padding:80px 100px; }
+  .slide-dark { background:var(--near-black); color:var(--cream); }
+  .slide-mid { background:var(--dark-brown); color:var(--cream); }
+
+  .slide-num { position:absolute; bottom:48px; right:100px; font-family:'Jost',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.3em; color:var(--text-muted); }
+  .slide-dark .slide-num, .slide-mid .slide-num { color:rgba(234,228,220,0.4); }
+
+  .rule { width:60px; height:1px; background:var(--bronze); margin:24px 0; }
+  .rule-full { width:100%; height:1px; background:var(--rule); margin:36px 0; }
+  .slide-dark .rule-full, .slide-mid .rule-full { background:rgba(234,228,220,0.12); }
+
+  .eyebrow { font-family:'Jost',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.45em; text-transform:uppercase; color:var(--bronze); margin-bottom:16px; }
+  .slide-dark .eyebrow, .slide-mid .eyebrow { color:rgba(234,228,220,0.5); }
+
+  h1 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(52px,7vw,92px); line-height:0.95; }
+  h2 { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(34px,4.2vw,60px); line-height:1.05; }
+  h3 { font-family:'Cormorant Garamond',serif; font-weight:400; font-size:clamp(20px,2.2vw,28px); line-height:1.2; }
+
+  .lead { font-family:'Jost',sans-serif; font-weight:300; font-size:clamp(14px,1.3vw,17px); line-height:1.9; color:var(--text-body); max-width:680px; }
+  .slide-dark .lead, .slide-mid .lead { color:rgba(234,228,220,0.8); }
+
+  .body-text { font-family:'Jost',sans-serif; font-weight:300; font-size:clamp(13px,1.05vw,14.5px); line-height:1.9; color:var(--text-body); }
+  .slide-dark .body-text, .slide-mid .body-text { color:rgba(234,228,220,0.72); }
+
+  .ora-logo { display:flex; flex-direction:column; align-items:flex-start; }
+  .ora-wordmark { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:48px; letter-spacing:0.28em; color:var(--near-black); }
+  .slide-dark .ora-wordmark, .slide-mid .ora-wordmark { color:var(--cream); }
+  .ora-rule { width:100%; height:1px; background:var(--bronze); margin:7px 0 5px; }
+  .ora-tagline { font-family:'Jost',sans-serif; font-weight:300; font-size:8.5px; letter-spacing:0.32em; color:var(--bronze); }
+  .ora-sub { font-family:'Jost',sans-serif; font-weight:400; font-size:7.5px; letter-spacing:0.5em; color:var(--near-black); text-transform:uppercase; margin-top:4px; }
+  .slide-dark .ora-sub, .slide-mid .ora-sub { color:var(--cream); }
+
+  .sanar-logo { display:flex; flex-direction:column; }
+  .sanar-wordmark { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:34px; letter-spacing:0.32em; color:var(--near-black); text-transform:uppercase; }
+  .slide-dark .sanar-wordmark, .slide-mid .sanar-wordmark { color:var(--cream); }
+  .sanar-sub { font-family:'Jost',sans-serif; font-weight:300; font-size:7.5px; letter-spacing:0.5em; color:var(--warm-brown); text-transform:uppercase; margin-top:4px; }
+  .slide-dark .sanar-sub, .slide-mid .sanar-sub { color:rgba(234,228,220,0.55); }
+
+  .logo-pair { display:flex; align-items:center; gap:44px; }
+  .logo-divider { width:1px; height:60px; background:var(--rule); }
+  .slide-dark .logo-divider { background:rgba(234,228,220,0.18); }
+
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
+  .grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:36px; }
+  .grid-4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:28px; }
+  .grid-2-3 { display:grid; grid-template-columns:2fr 3fr; gap:72px; align-items:start; }
+
+  .card { padding:36px 30px; border:1px solid var(--rule); position:relative; }
+  .card::before { content:''; position:absolute; top:0; left:0; width:36px; height:1px; background:var(--bronze); }
+  .card-dark { padding:32px 28px; border:1px solid rgba(234,228,220,0.1); position:relative; }
+  .card-dark::before { content:''; position:absolute; top:0; left:0; width:36px; height:1px; background:var(--bronze); }
+
+  .card-num { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:48px; color:var(--cream-dark); line-height:1; margin-bottom:14px; }
+  .slide-dark .card-num { color:rgba(234,228,220,0.08); }
+
+  .item-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+  .item-list li { display:flex; align-items:flex-start; gap:14px; font-family:'Jost',sans-serif; font-weight:300; font-size:13.5px; line-height:1.75; color:var(--text-body); }
+  .slide-dark .item-list li, .slide-mid .item-list li { color:rgba(234,228,220,0.75); }
+  .item-list li::before { content:'—'; color:var(--bronze); flex-shrink:0; margin-top:1px; }
+
+  .tag { display:inline-block; border:1px solid var(--rule); font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; padding:7px 16px; color:var(--text-body); margin:4px; }
+  .slide-dark .tag { border-color:rgba(234,228,220,0.18); color:rgba(234,228,220,0.7); }
+
+  .deco-text { position:absolute; font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(110px,17vw,240px); line-height:1; color:transparent; -webkit-text-stroke:1px rgba(100,80,60,0.07); pointer-events:none; user-select:none; }
+
+  .section-label { position:absolute; top:52px; left:100px; font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.4em; text-transform:uppercase; color:var(--text-muted); }
+  .slide-dark .section-label, .slide-mid .section-label { color:rgba(234,228,220,0.3); }
+
+  .pull-quote { font-family:'Cormorant Garamond',serif; font-weight:300; font-style:italic; font-size:clamp(20px,2.5vw,34px); line-height:1.45; color:var(--dark-brown); border-left:1.5px solid var(--bronze); padding-left:32px; max-width:720px; }
+  .slide-dark .pull-quote { color:rgba(234,228,220,0.82); }
+
+  .metric-val { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:clamp(38px,4.5vw,66px); line-height:1; color:var(--near-black); }
+  .slide-dark .metric-val { color:var(--cream); }
+  .metric-label { font-family:'Jost',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--bronze); margin-top:6px; }
+
+  .transform-from, .transform-to { flex:1; padding:30px 28px; border:1px solid var(--rule); }
+  .transform-to { background:var(--near-black); border-color:var(--near-black); }
+  .t-label { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:0.4em; text-transform:uppercase; color:var(--text-muted); margin-bottom:12px; }
+  .transform-to .t-label { color:rgba(234,228,220,0.4); }
+  .t-name { font-family:'Cormorant Garamond',serif; font-weight:300; font-size:22px; color:var(--near-black); line-height:1.2; }
+  .transform-to .t-name { color:var(--cream); }
+
+  .timeline { display:flex; flex-direction:column; position:relative; }
+  .timeline::before { content:''; position:absolute; left:12px; top:0; bottom:0; width:1px; background:var(--rule); }
+  .slide-dark .timeline::before { background:rgba(234,228,220,0.1); }
+  .tl-item { display:flex; gap:36px; align-items:flex-start; padding:24px 0; position:relative; }
+  .tl-dot { width:24px; height:24px; border:1px solid var(--bronze); background:var(--cream); flex-shrink:0; position:relative; z-index:1; display:flex; align-items:center; justify-content:center; }
+  .tl-dot::after { content:''; width:7px; height:7px; background:var(--bronze); }
+
+  .page-break { height:2px; background:linear-gradient(to right,transparent,var(--bronze),transparent); }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:translateY(0); } }
+  .slide:first-child > * { animation:fadeUp 0.85s ease forwards; }
+  .slide:first-child > *:nth-child(2) { animation-delay:0.15s; opacity:0; }
+  .slide:first-child > *:nth-child(3) { animation-delay:0.3s; opacity:0; }
+  .slide:first-child > *:nth-child(4) { animation-delay:0.45s; opacity:0; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1 COVER -->
+<div class="slide" style="justify-content:space-between; min-height:100vh;">
+  <div class="deco-text" style="right:-50px; top:-30px;">SANAR</div>
+  <div class="logo-pair">
+    <div class="ora-logo">
+      <div class="ora-wordmark">ORA</div>
+      <div class="ora-rule"></div>
+      <div class="ora-tagline">Radiance · Vitality · Longevity</div>
+      <div class="ora-sub">Wellness</div>
+    </div>
+    <div class="logo-divider"></div>
+    <div class="sanar-logo">
+      <div class="sanar-wordmark">Sanar</div>
+      <div class="sanar-sub">Integrative · Polanco</div>
+    </div>
+  </div>
+  <div>
+    <div class="eyebrow">Strategic Repositioning Plan · 2025</div>
+    <h1>Precision<br><em style="font-style:italic;">Functional</em><br>Longevity</h1>
+    <div class="rule"></div>
+    <p class="lead">Transforming Sanar Integrative from a respected functional medicine clinic into a premier Precision Functional Longevity Institute — positioned at the intersection of medicine, performance, and elevated living.</p>
+  </div>
+  <div>
+    <div class="rule-full"></div>
+    <div style="display:flex; gap:72px;">
+      <div><div class="metric-val">6</div><div class="metric-label">Strategic Pillars</div></div>
+      <div><div class="metric-val">4</div><div class="metric-label">Target Client Segments</div></div>
+      <div><div class="metric-val">∞</div><div class="metric-label">Growth Potential</div></div>
+    </div>
+  </div>
+  <div class="slide-num">01 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 2 VISION -->
+<div class="slide slide-dark">
+  <div class="deco-text" style="left:-30px; bottom:-50px; -webkit-text-stroke-color:rgba(255,255,255,0.03);">VISION</div>
+  <div class="section-label">01 — Vision</div>
+  <div style="max-width:880px;">
+    <div class="eyebrow" style="margin-bottom:32px;">Where We Are Going</div>
+    <h2 style="margin-bottom:36px;">The longevity market is evolving<br>far beyond <em style="font-style:italic;">anti-aging branding.</em></h2>
+    <div class="rule"></div>
+    <p class="lead" style="margin-bottom:44px;">High-value clients increasingly seek diagnostics, stress regulation, hormone optimization, metabolic health, executive resilience, and long-term vitality. Sanar already possesses the clinical infrastructure to lead this evolution.</p>
+    <div class="pull-quote">"Transform Sanar Integrative from a respected functional medicine clinic into a premier Precision Functional Longevity Institute — internationally relevant, medically credible, luxury in experience."</div>
+  </div>
+  <div class="slide-num">02 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 3 CURRENT ASSETS -->
+<div class="slide">
+  <div class="deco-text" style="right:-70px; top:50%; transform:translateY(-50%);">NOW</div>
+  <div class="section-label">02 — Current State</div>
+  <div class="grid-2-3">
+    <div>
+      <div class="eyebrow">Where Sanar Stands Today</div>
+      <h2>Existing Strategic Assets</h2>
+      <div class="rule"></div>
+      <p class="body-text" style="margin-bottom:28px;">Sanar already possesses substantial medical sophistication. The opportunity is to articulate and elevate what already exists into a premium, internationally positioned brand.</p>
+      <div style="display:flex; flex-wrap:wrap;">
+        <span class="tag">Functional Medicine</span><span class="tag">Chronic Disease</span><span class="tag">Personalized Care</span><span class="tag">Integrative Therapies</span><span class="tag">Polanco</span><span class="tag">International Clientele</span>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:18px;">
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:10px;">Advanced Diagnostics</div>
+        <ul class="item-list"><li>WMS-EIS technology & epigenetic testing</li><li>Comprehensive laboratory analysis</li><li>Full hormonal evaluations</li></ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:10px;">Neuromodulation & Performance</div>
+        <ul class="item-list"><li>Nervous system regulation protocols</li><li>Sleep optimization programs</li><li>High-performance executive programs</li></ul>
+      </div>
+      <div class="card">
+        <div class="eyebrow" style="margin-bottom:10px;">Cellular Optimization</div>
+        <ul class="item-list"><li>NAD, CoQ10, Ozone, IV Nutrition</li><li>Stem cells, PRP, INDIBA therapies</li><li>Hormonal support & gut restoration</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">03 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 4 TRANSFORMATION -->
+<div class="slide slide-mid">
+  <div class="section-label">03 — Repositioning</div>
+  <div class="eyebrow">The Strategic Shift</div>
+  <h2 style="margin-bottom:44px;">From Clinic to <em style="font-style:italic;">Institute</em></h2>
+  <div style="display:flex; flex-direction:column; gap:3px; max-width:880px;">
+    <div style="display:flex; align-items:center; gap:3px;">
+      <div class="transform-from"><div class="t-label">Away From</div><div class="t-name">Traditional anti-aging messaging</div></div>
+      <div style="color:#8C6E50; font-size:22px; padding:0 14px; flex-shrink:0;">→</div>
+      <div class="transform-to"><div class="t-label">Toward</div><div class="t-name">Precision Longevity Medicine</div></div>
+    </div>
+    <div style="display:flex; align-items:center; gap:3px;">
+      <div class="transform-from"><div class="t-label">Away From</div><div class="t-name">Detox & wellness clinic</div></div>
+      <div style="color:#8C6E50; font-size:22px; padding:0 14px; flex-shrink:0;">→</div>
+      <div class="transform-to"><div class="t-label">Toward</div><div class="t-name">Integrative Performance Medicine</div></div>
+    </div>
+    <div style="display:flex; align-items:center; gap:3px;">
+      <div class="transform-from"><div class="t-label">Away From</div><div class="t-name">General functional medicine</div></div>
+      <div style="color:#8C6E50; font-size:22px; padding:0 14px; flex-shrink:0;">→</div>
+      <div class="transform-to"><div class="t-label">Toward</div><div class="t-name">Cellular Optimization Institute</div></div>
+    </div>
+  </div>
+  <div class="slide-num">04 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 5 CLIENT PROFILES -->
+<div class="slide">
+  <div class="deco-text" style="right:-50px; bottom:-10px;">CLIENT</div>
+  <div class="section-label">04 — Target Segments</div>
+  <div class="eyebrow">High-Value Client Categories</div>
+  <h2 style="margin-bottom:44px;">Four Core Client Profiles</h2>
+  <div class="grid-4">
+    <div class="card"><div class="card-num">01</div><h3 style="margin-bottom:12px;">Executive Performance</h3><p class="body-text">Burnout recovery, cognitive optimization, and resilience protocols for high-output leaders.</p></div>
+    <div class="card"><div class="card-num">02</div><h3 style="margin-bottom:12px;">Women's Hormonal Longevity</h3><p class="body-text">Menopause optimization, hormonal health, and precision female longevity programs.</p></div>
+    <div class="card"><div class="card-num">03</div><h3 style="margin-bottom:12px;">International & Expat</h3><p class="body-text">Premium wellness clientele seeking world-class integrative medicine in Mexico City.</p></div>
+    <div class="card"><div class="card-num">04</div><h3 style="margin-bottom:12px;">Preventive Luxury</h3><p class="body-text">Affluent consumers investing in long-term vitality, cellular health, and premium prevention.</p></div>
+  </div>
+  <div class="slide-num">05 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 6 LUXURY ELEVATION -->
+<div class="slide slide-dark">
+  <div class="section-label">05 — Brand Experience</div>
+  <div class="grid-2">
+    <div>
+      <div class="eyebrow">Luxury Elevation Strategy</div>
+      <h2 style="margin-bottom:28px;">Real Medical Credibility<br>Meets <em style="font-style:italic;">Refined Experience</em></h2>
+      <div class="rule"></div>
+      <p class="lead" style="margin-bottom:36px;">The luxury wellness narrative must be built on genuine clinical depth — not aesthetics alone. Sanar's medical sophistication is its most powerful differentiator.</p>
+      <ul class="item-list">
+        <li>Refined visual identity aligned with ORA wellness standards</li>
+        <li>Concierge onboarding for VIP and executive clients</li>
+        <li>Executive membership tiers with dedicated Wellness Director</li>
+        <li>International patient experience protocols</li>
+        <li>Luxury partnerships: hotels, spas, private clubs</li>
+      </ul>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:18px;">
+      <div class="card-dark" style="padding:44px 36px;">
+        <div class="eyebrow" style="margin-bottom:18px;">New Role</div>
+        <h3 style="font-size:24px; margin-bottom:14px; color:var(--cream);">Concierge Wellness Director</h3>
+        <p class="body-text">Overseeing VIP onboarding, strategic partnerships, membership experience, international patient relations, and long-term brand growth.</p>
+      </div>
+      <div class="card-dark">
+        <div class="eyebrow" style="margin-bottom:14px;">Brand Principles</div>
+        <ul class="item-list"><li>Precision over promises</li><li>Discretion and intimacy</li><li>Science as luxury</li><li>Longevity as lifestyle</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">06 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 7 EXPANSION -->
+<div class="slide">
+  <div class="section-label">06 — Expansion</div>
+  <div class="eyebrow">Strategic Expansion Opportunities</div>
+  <h2 style="margin-bottom:44px;">The Partnership Ecosystem</h2>
+  <div class="grid-3">
+    <div>
+      <div style="width:1px; height:56px; background:var(--bronze); margin-bottom:22px;"></div>
+      <h3 style="font-size:19px; margin-bottom:12px;">Luxury & Lifestyle</h3>
+      <ul class="item-list"><li>Luxury gyms and executive clubs</li><li>Recovery spas and wellness retreats</li><li>5-star hotels and private residences</li><li>Branded wellness tourism packages</li></ul>
+    </div>
+    <div>
+      <div style="width:1px; height:56px; background:var(--warm-brown); margin-bottom:22px;"></div>
+      <h3 style="font-size:19px; margin-bottom:12px;">Medical Adjacency</h3>
+      <ul class="item-list"><li>Aesthetic dentistry partnerships</li><li>Women's health specialists</li><li>Regenerative medicine networks</li><li>Concierge medical collaborations</li></ul>
+    </div>
+    <div>
+      <div style="width:1px; height:56px; background:var(--mid-brown); margin-bottom:22px;"></div>
+      <h3 style="font-size:19px; margin-bottom:12px;">Corporate Wellness</h3>
+      <ul class="item-list"><li>Executive wellness retainers</li><li>Corporate longevity programs</li><li>C-suite performance protocols</li><li>Team resilience & burnout programs</li></ul>
+    </div>
+  </div>
+  <div class="slide-num">07 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 8 REVENUE -->
+<div class="slide slide-mid">
+  <div class="section-label">07 — Revenue Model</div>
+  <div class="eyebrow">Long-Term Growth Potential</div>
+  <h2 style="margin-bottom:44px;">Six Revenue <em style="font-style:italic;">Channels</em></h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:3px;">
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">I</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Executive Memberships</h3><p class="body-text">Annual private optimization memberships with full-spectrum longevity protocols and dedicated concierge care.</p></div>
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">II</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Corporate Retainers</h3><p class="body-text">Institutional wellness programs for high-performance teams and leadership groups.</p></div>
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">III</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Wellness Tourism</h3><p class="body-text">Luxury wellness retreats and immersive longevity experiences for international visitors.</p></div>
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">IV</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Women's Longevity</h3><p class="body-text">Dedicated programs for hormonal health, menopause optimization, and female longevity medicine.</p></div>
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">V</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Private Memberships</h3><p class="body-text">Tiered VIP structure with exclusive access, priority scheduling, and personalized protocols.</p></div>
+    <div class="card-dark" style="padding:36px 30px;"><div style="font-family:'Cormorant Garamond',serif; font-size:30px; color:rgba(234,228,220,0.07); margin-bottom:10px;">VI</div><h3 style="font-size:17px; margin-bottom:12px; color:var(--cream);">Branded Protocols</h3><p class="body-text">Proprietary longevity protocols, strategic collaborations, and branded longevity experiences.</p></div>
+  </div>
+  <div class="slide-num">08 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 9 ROADMAP -->
+<div class="slide">
+  <div class="section-label">08 — Roadmap</div>
+  <div class="grid-2-3">
+    <div>
+      <div class="eyebrow">Implementation</div>
+      <h2>Strategic Milestones</h2>
+      <div class="rule"></div>
+      <p class="body-text">A phased approach to repositioning — building on existing clinical strength while layering in luxury experience, brand narrative, and revenue diversification.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-dot"></div><div><div class="eyebrow" style="margin-bottom:6px;">Phase I · Foundation</div><h3 style="font-size:17px; margin-bottom:8px;">Brand & Experience Refinement</h3><p class="body-text">Align visual identity with ORA wellness standards. Develop concierge onboarding workflows. Define the Precision Longevity brand narrative and messaging framework.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div><div class="eyebrow" style="margin-bottom:6px;">Phase II · Activation</div><h3 style="font-size:17px; margin-bottom:8px;">Membership & Concierge Launch</h3><p class="body-text">Launch executive membership tiers. Hire Concierge Wellness Director. Activate strategic partnerships with luxury gyms, hotels, and corporate clients.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div><div class="eyebrow" style="margin-bottom:6px;">Phase III · Expansion</div><h3 style="font-size:17px; margin-bottom:8px;">International Positioning</h3><p class="body-text">Develop luxury wellness tourism packages. Build corporate wellness retainer program. Launch Women's Longevity Institute and international patient protocols.</p></div></div>
+      <div class="tl-item"><div class="tl-dot"></div><div><div class="eyebrow" style="margin-bottom:6px;">Phase IV · Legacy</div><h3 style="font-size:17px; margin-bottom:8px;">Branded Protocols & Collaborations</h3><p class="body-text">Proprietary longevity protocols, strategic medical collaborations, and Sanar established as a globally recognized Precision Longevity brand.</p></div></div>
+    </div>
+  </div>
+  <div class="slide-num">09 / 10</div>
+</div>
+<div class="page-break"></div>
+
+<!-- SLIDE 10 CLOSING -->
+<div class="slide slide-dark" style="justify-content:space-between; min-height:100vh;">
+  <div class="deco-text" style="right:-50px; top:-10px; -webkit-text-stroke-color:rgba(255,255,255,0.025);">ORA</div>
+  <div class="logo-pair">
+    <div class="ora-logo"><div class="ora-wordmark">ORA</div><div class="ora-rule"></div><div class="ora-tagline">Radiance · Vitality · Longevity</div><div class="ora-sub">Wellness</div></div>
+    <div class="logo-divider"></div>
+    <div class="sanar-logo"><div class="sanar-wordmark">Sanar</div><div class="sanar-sub">Integrative · Polanco</div></div>
+  </div>
+  <div>
+    <div class="eyebrow" style="margin-bottom:32px;">Conclusion</div>
+    <h2 style="margin-bottom:36px;">The infrastructure exists.<br>The medical credibility is real.<br><em style="font-style:italic;">The opportunity is now.</em></h2>
+    <div class="rule"></div>
+    <p class="lead" style="margin-bottom:44px;">Sanar already possesses the clinical depth, technological assets, and patient trust to make this leap. The strategic opportunity is to elevate its positioning into a premium, internationally relevant functional longevity brand — with luxury-level experience and uncompromising medical credibility.</p>
+    <div class="pull-quote">Precision medicine. Elevated living.<br>The future of longevity is here — in Polanco.</div>
+  </div>
+  <div>
+    <div class="rule-full"></div>
+    <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div style="display:flex; gap:52px;">
+        <div><div class="metric-val" style="font-size:30px;">2025</div><div class="metric-label">Strategic Year</div></div>
+        <div><div class="metric-val" style="font-size:30px;">Polanco</div><div class="metric-label">Mexico City</div></div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:0.4em; color:rgba(234,228,220,0.3); text-transform:uppercase;">Presented by ORA Wellness</div>
+        <div style="font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:0.4em; color:rgba(234,228,220,0.15); text-transform:uppercase; margin-top:5px;">Confidential · Strategic Document</div>
+      </div>
+    </div>
+  </div>
+  <div class="slide-num">10 / 10</div>
+</div>
+
+</body>
+</html>
